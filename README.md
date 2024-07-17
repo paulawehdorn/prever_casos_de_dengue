@@ -19,11 +19,11 @@ Uma página web com as seguintes funcionalidades:
 
 ## 3. Como vamos trabalhar?
 
-**3.1. Gerenciamento e organização do projeto:**
+### 3.1. Gerenciamento e organização do projeto:
 - Gerenciamento: Utilizaremos o framework [SCRUM](https://www.scrum.org/resources/what-scrum-module) para gerenciamento ágil do projeto.;
 - Organização: Adotaremos o framework [DM-CRISP](https://www.datascience-pm.com/crisp-dm-2/) para estruturação das etapas de ciência de dados.
 
-**3.2. Fontes de dados:**
+### 3.2. Fontes de dados:
 - Os dados utilizados neste projeto são provenientes de uma competição do  [kaggle](https://www.kaggle.com/competitions/8-hackday-comunidadeds/overview) e estão disponibilizados na pasta "data" do repositório:
   - 'tb_fato.csv';
   - 'tb_casos_dengue.csv';
@@ -32,10 +32,10 @@ Uma página web com as seguintes funcionalidades:
   - 'tb_falta_higiene.csv';
   - 'tb_conscientizacao.csv'.
 
-**3.3. Quais as características que influenciam o número dos casos de dengue?**
+### **3.3. Quais as características que influenciam o número dos casos de dengue?**
 - O dicionário de dados encontra-se no notebook.
 
-**3.4. Como será medido o desempenho do modelo de ml?**
+### 3.4. Como será medido o desempenho do modelo de ml?
 
 A métrica de desempenho escolhida é o [Root Mean Squared Error (RMSE)](https://docs.oracle.com/cloud/help/pt_BR/pbcs_common/PFUSU/insights_metrics_RMSE.htm#PFUSU-GUID-FD9381A1-81E1-4F6D-8EC4-82A6CE2A6E74), que é adequada para medir a precisão de previsões contínuas, penalizando grandes desvios.
 
