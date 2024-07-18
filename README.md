@@ -32,10 +32,10 @@ Uma página web com as seguintes funcionalidades:
   - 'tb_falta_higiene.csv';
   - 'tb_conscientizacao.csv'.
 
-### **3.3. Quais as características que influenciam o número dos casos de dengue?**
-- O dicionário de dados encontra-se no notebook.
+### 3.3. Atributos que influenciam a previsão:
+- O dicionário de dados encontra-se no [item 8](#8-dicionário-de-dados).
 
-### 3.4. Como será medido o desempenho do modelo de ml?
+### 3.4. Métrica de desempenho:
 
 A métrica de desempenho escolhida é o [Root Mean Squared Error (RMSE)](https://docs.oracle.com/cloud/help/pt_BR/pbcs_common/PFUSU/insights_metrics_RMSE.htm#PFUSU-GUID-FD9381A1-81E1-4F6D-8EC4-82A6CE2A6E74), que é adequada para medir a precisão de previsões contínuas, penalizando grandes desvios.
 
@@ -51,7 +51,6 @@ Um relatório de explanação contendo:
 
 ## 6. Tecnologias Utilizadas
 
-- Lista de versionamento entrontra-se no arquivo requirements.txt;
 - Python;
 - Pandas, Numpy, Matplotlib, Seaborn, Scikit-Learn;
 - Pickle;
@@ -60,6 +59,7 @@ Um relatório de explanação contendo:
 - Git e Github.
 
 ## 7. Requisitos de Sistema
+
 Para recriar o ambiente virtual Python, execute os seguintes comandos:
 
 ```bash
@@ -67,3 +67,46 @@ conda create -n casos_dengue python=3.12.4
 conda activate casos_dengue
 pip install -r requirements.txt
 ```
+
+## 8. Dicionário de dados
+
+FEATURE	| DESCRIPTION
+-- | --
+Date | Data das informações
+Casos de dengue | Total de número de casos observados no dia
+Presença de mosquito | Quantidade de mosquitos observada
+Precipitação | Água proveniente do vapor de água atmosférica depositada na superfície
+Umidade | Relação entre a pressão parcial da água contida no ar e a pressão de vapor da água à temperatura do ar
+Temperatura | Calor da atmosfera, em graus Celsius (ºC)
+Conscientização da População | Nível de conscientização sobre a dengue
+Condições de Moradia Precárias | Taxa de moradias precárias na área observada
+Falta de Acesso a Serviços de Saúde | Taxa de moradores sem acesso a serviços de saúde
+Migração de Pessoas de Áreas Endêmicas | Taxa de migração entre áreas
+Transporte de Mercadorias em Áreas Urbanas | % de veículos de transporte de cargas
+Presença de Criadouros | % da área com presença de mosquitos
+Água Parada em Terrenos Baldios | % da área com presença de água parada
+Presença de Piscinas sem Manutenção | Número de piscinas sem manutenção observadas
+Presença de Recipientes sem Tampas | Número de recipientes observados no dia
+Falta de Coleta de Lixo | Taxa de coleta de lixo realizada
+Área com Acúmulo de Entulho | % da área com entulho
+Falta de Controle de Pragas | % da área observada sem controle de pragas
+Taxa de Tratamento de Esgoto | % de esgoto não tratado na área observada
+Status | Status de conscientização da população
+Id | Identificador único do registro
+
+## 9. Estrutura de Pastas
+```plaintext
+├── data
+│   ├── tb_fato.csv
+│   ├── tb_casos_dengue.csv
+│   ├── tb_agua_parada.csv
+│   ├── tb_condicoes_climaticas.csv
+│   ├── tb_falta_higiene.csv
+│   └── tb_conscientizacao.csv
+├── img
+├── models
+│   └── model.pkl
+├── notebooks
+│   └── prever_casos_de_dengue.ipynb
+├── README.md
+└── requirements.txt
